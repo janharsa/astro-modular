@@ -60,7 +60,7 @@ export function calculateReadingTime(content: string): ReadingTime {
   // Handle empty or undefined content
   if (!content || typeof content !== "string") {
     return {
-      text: "1 min read",
+      text: "1 min čtení",
       minutes: 1,
       time: 60000,
       words: 0,
