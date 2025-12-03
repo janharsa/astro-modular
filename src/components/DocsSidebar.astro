@@ -45,14 +45,14 @@ filteredDocs.sort((a, b) => {
 });
 
 // Determine sidebar header text
-const sidebarHeader = currentCategory && currentCategory !== 'General' ? currentCategory : 'Documentation';
+const sidebarHeader = currentCategory && currentCategory !== 'Obecné' ? currentCategory : 'Dokumentace';
 ---
 
 <!-- Desktop Sidebar (visible at xl breakpoint and above, hidden on mobile - same behavior as TOC) -->
 <aside 
   id="docs-sidebar-desktop" 
   class="hidden xl:block absolute top-0 right-full w-64 mr-4 pointer-events-auto"
-  aria-label="Documentation navigation"
+  aria-label="Dokumentační navigace"
 >
   <div class="sticky top-24 max-h-[calc(100vh-8rem)] overflow-y-auto">
     <div class="bg-primary-50 dark:bg-primary-900 rounded-lg border border-primary-200 dark:border-primary-700 shadow-sm p-4">

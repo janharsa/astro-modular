@@ -82,8 +82,8 @@ shouldShowTOC = !docsPageHideTOC && tocHeadings.length > 0;
 
 // Generate SEO data
 const seoData = generatePostsListSEO(import.meta.env.SITE || '', undefined);
-seoData.title = docsPageContent?.data.title ? `${docsPageContent.data.title} | ${siteConfig.title}` : `Documentation | ${siteConfig.title}`;
-seoData.description = docsPageContent?.data.description || `Browse all documentation on ${siteConfig.title}`;
+seoData.title = docsPageContent?.data.title ? `${docsPageContent.data.title} | ${siteConfig.title}` : `Dokumenty | ${siteConfig.title}`;
+seoData.description = docsPageContent?.data.description || `Projít všechny dokumenty na ${siteConfig.title}`;
 seoData.noIndex = (docsPageContent?.data as any)?.noIndex || false;
 ---
 
@@ -96,7 +96,7 @@ seoData.noIndex = (docsPageContent?.data as any)?.noIndex || false;
       <!-- Page header -->
       <header class="mb-8">
         <h1 class="text-lg font-bold text-primary-900 dark:text-primary-50 mb-3">
-          {docsPageContent?.data.title || 'Documentation'}
+          {docsPageContent?.data.title || 'Dokumenty'}
         </h1>
         {DocsPageContent ? (
           <div class="prose prose-sm dark:prose-dark max-w-none">
@@ -104,7 +104,7 @@ seoData.noIndex = (docsPageContent?.data as any)?.noIndex || false;
           </div>
         ) : (
           <p class="text-primary-600 dark:text-primary-300">
-            Guides, tutorials, and reference materials
+            Návody, turoriály a reference
           </p>
         )}
       </header>
@@ -163,10 +163,10 @@ seoData.noIndex = (docsPageContent?.data as any)?.noIndex || false;
           <div class="text-center py-12">
             <Icon name="book-open" class="w-12 h-12 text-primary-300 dark:text-primary-600 mx-auto mb-4" />
             <h3 class="text-lg font-medium text-primary-900 dark:text-primary-50 mb-2">
-              No documentation yet
+              Zatím žádné dokumenty
             </h3>
             <p class="text-primary-600 dark:text-primary-300">
-              Check back soon for guides and tutorials!
+              Prosím přijďte později
             </p>
           </div>
         )}

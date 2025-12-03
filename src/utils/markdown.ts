@@ -86,7 +86,7 @@ export function calculateReadingTime(content: string): ReadingTime {
   const minutes = Math.max(1, Math.ceil(wordCount / wordsPerMinute));
 
   return {
-    text: `${minutes} min read`,
+    text: `${minutes} min čtení`,
     minutes: minutes,
     time: minutes * 60 * 1000, // in milliseconds
     words: wordCount,
@@ -180,14 +180,14 @@ export function formatDate(date: Date): string {
       date.getUTCMonth(),
       date.getUTCDate()
     );
-    return localDate.toLocaleDateString("en-US", {
+    return localDate.toLocaleDateString("cs-CZ", {
       year: "numeric",
       month: "long",
       day: "numeric",
     });
   }
 
-  return date.toLocaleDateString("en-US", {
+  return date.toLocaleDateString("cs-CZ", {
     year: "numeric",
     month: "long",
     day: "numeric",
@@ -209,14 +209,14 @@ export function formatDateMobile(date: Date): string {
       date.getUTCMonth(),
       date.getUTCDate()
     );
-    return localDate.toLocaleDateString("en-US", {
+    return localDate.toLocaleDateString("cs-CZ", {
       year: "numeric",
       month: "short",
       day: "numeric",
     });
   }
 
-  return date.toLocaleDateString("en-US", {
+  return date.toLocaleDateString("cs-CZ", {
     year: "numeric",
     month: "short",
     day: "numeric",

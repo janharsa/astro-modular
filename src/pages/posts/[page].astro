@@ -70,11 +70,11 @@ const allTags = extractTags(posts);
 
 // Generate SEO data
 const pageTitle = selectedTag
-  ? `Posts tagged "${selectedTag}" - Page ${currentPage}`
-  : `All Posts - Page ${currentPage}`;
+  ? `Články se štítkem "${selectedTag}" - Strana ${currentPage}`
+  : `Všechny články - Strana ${currentPage}`;
 const pageDescription = selectedTag
-  ? `Page ${currentPage} of posts tagged with "${selectedTag}"`
-  : `Page ${currentPage} of all posts on ${siteConfig.title}`;
+  ? `Strana ${currentPage} článků se štítkem "${selectedTag}"`
+  : `Strana ${currentPage} ze všech článků na ${siteConfig.title}`;
 
 const seoData = {
   title: `${pageTitle} | ${siteConfig.title}`,
@@ -102,41 +102,41 @@ const pagination = {
         <div class="flex items-start justify-between mb-3">
           <h1 class="text-lg font-bold text-primary-900 dark:text-primary-50">
             {selectedTag ? (
-              <>Posts tagged "{selectedTag}"</>
+              <>Články se štítkem "{selectedTag}"</>
             ) : (
-              <>All Posts</>
+              <>Všechny články</>
             )}
           </h1>
           <div class="flex items-center space-x-2">
             <a
               href="/rss.xml"
               class="inline-flex items-center px-3 py-2 text-sm font-medium text-highlight-600 dark:text-highlight-400 bg-highlight-50 dark:bg-highlight-900/20 rounded-lg border border-highlight-200 dark:border-highlight-700 hover:bg-highlight-100 dark:hover:bg-highlight-900/40 hover:text-highlight-700 dark:hover:text-highlight-300 transition-all duration-200"
-              title="Subscribe to RSS feed"
+              title="Odebírejte RSS feed"
               data-no-swup
             >
               <Icon name="rss" class="w-4 h-4 mr-1.5" />
-              RSS Feed
+              RSS
             </a>
             <a
               href="/feed.xml"
               class="inline-flex items-center px-3 py-2 text-sm font-medium text-highlight-600 dark:text-highlight-400 bg-highlight-50 dark:bg-highlight-900/20 rounded-lg border border-highlight-200 dark:border-highlight-700 hover:bg-highlight-100 dark:hover:bg-highlight-900/40 hover:text-highlight-700 dark:hover:text-highlight-300 transition-all duration-200"
-              title="Subscribe to Atom feed"
+              title="Odebírejte Atom feed"
               data-no-swup
             >
               <Icon name="atom" class="w-4 h-4 mr-1.5" />
-              Atom Feed
+              Atom
             </a>
           </div>
         </div>
         <p class="text-base text-primary-600 dark:text-primary-300">
-          Page {currentPage} of {totalPages} • <strong>{filteredPosts.length}</strong>
+          Strana {currentPage} z {totalPages} • <strong>{filteredPosts.length}</strong>
           {selectedTag ? (
-            <>posts tagged with
+            <>článků se štítkem 
             <span class="inline-flex items-center px-2 py-1 bg-highlight-100 dark:bg-highlight-900/30 text-highlight-800 dark:text-highlight-200 rounded text-sm font-medium ml-1">
               #{selectedTag}
             </span></>
           ) : (
-            <>total posts</>
+            <>všech článků</>
           )}
         </p>
 
@@ -146,7 +146,7 @@ const pagination = {
             class="inline-flex items-center text-sm text-primary-600 dark:text-primary-300 hover:text-primary-800 dark:hover:text-primary-200 transition-colors"
           >
             <Icon name="arrow-left" class="w-4 h-4 mr-1" />
-            Show all posts
+            Zobrazit všechny články
           </a>
         </div>
       </header>
@@ -171,18 +171,18 @@ const pagination = {
             <div class="text-center py-16">
               <Icon name="search-x" class="w-16 h-16 text-primary-400 dark:text-primary-500 mx-auto mb-6" />
               <h2 class="text-2xl font-semibold text-primary-900 dark:text-primary-50 mb-4">
-                No posts found on this page
+                Na této stránce nejsou žádné články
               </h2>
               <p class="text-primary-600 dark:text-primary-300 mb-8">
-                Try going back to an earlier page or removing filters.
+                Vraťte se na předchozí stránku nebo odstraňte filtr.
               </p>
               <div class="space-x-4">
                 <a href="/posts" class="btn-secondary">
-                  View All Posts
+                  Zobrazit všechny články
                 </a>
                 {currentPage > 1 && (
                   <a href={pagination.prevUrl} class="btn-outline">
-                    Previous Page
+                    Předchozí stránka
                   </a>
                 )}
               </div>

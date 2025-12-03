@@ -40,9 +40,9 @@ export function getStatusDisplayText(status: string | null): string {
   
   switch (status) {
     case 'in-progress':
-      return 'In Progress';
+      return 'Probíhá';
     case 'completed':
-      return 'Completed';
+      return 'Dokončeno';
     default:
       // Return the original status as-is for custom values
       return status;

@@ -85,7 +85,7 @@ const paletteIcon = allSectionsDisabled ? 'search' : 'command';
           <button
             id="header-graph-button"
             class="p-2 text-primary-500 dark:text-primary-400 hover:bg-primary-50 dark:hover:bg-primary-800 rounded-lg transition-colors duration-200"
-            aria-label="Open graph view"
+            aria-label="Zobrazit graf"
           >
             <Icon name="git-fork" class="w-5 h-5" />
           </button>
@@ -94,7 +94,7 @@ const paletteIcon = allSectionsDisabled ? 'search' : 'command';
           <button
             id="header-theme-button"
             class="p-2 text-primary-500 dark:text-primary-400 hover:bg-primary-50 dark:hover:bg-primary-800 rounded-lg transition-colors duration-200"
-            aria-label="Change theme"
+            aria-label="Změnit vzhled"
           >
             <Icon name="palette" class="w-5 h-5" />
           </button>
@@ -105,7 +105,7 @@ const paletteIcon = allSectionsDisabled ? 'search' : 'command';
             <button
               id="command-palette-trigger"
               class="flex items-center space-x-2 px-3 py-2 text-sm text-primary-500 dark:text-primary-400 bg-primary-50 dark:bg-primary-800 rounded-lg hover:bg-primary-100 dark:hover:bg-primary-700 transition-colors"
-              aria-label="Open command palette"
+              aria-label="Otevřít paletu příkazů"
             >
               <Icon name={paletteIcon} class="w-5 h-5" />
               <kbd class="text-xs font-medium text-primary-600 dark:text-primary-300">
@@ -116,7 +116,7 @@ const paletteIcon = allSectionsDisabled ? 'search' : 'command';
             <button
               id="command-palette-trigger"
               class="p-2 text-primary-500 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors"
-              aria-label="Open command palette"
+              aria-label="Otevřít paletu příkazů"
             >
               <Icon name={paletteIcon} class="w-5 h-5" />
             </button>
@@ -128,7 +128,7 @@ const paletteIcon = allSectionsDisabled ? 'search' : 'command';
           <button
             id="mobile-menu-toggle"
             class="md:hidden p-2 text-primary-500 dark:text-primary-400 hover:bg-primary-50 dark:hover:bg-primary-800 rounded-lg transition-colors"
-            aria-label="Toggle mobile navigation menu"
+            aria-label="Přepnout mobilní navigaci"
             aria-expanded="false"
           >
             <Icon name="menu" class="w-5 h-5 menu-icon" />
@@ -142,14 +142,14 @@ const paletteIcon = allSectionsDisabled ? 'search' : 'command';
     {siteConfig.navigation.showNavigation && siteConfig.navigation.showMobileMenu && (
       <div id="mobile-menu" class="md:hidden hidden py-4 border-t border-primary-200 dark:border-primary-700" role="dialog"
           aria-modal="true"
-          aria-label="Mobile navigation menu">
+          aria-label="Menu mobilní navigace">
         <nav class="flex flex-col space-y-3">
           {siteConfig.navigation.pages.map(page => (
             <a 
               href={page.url}
               class="flex items-center justify-between px-3 py-2 text-primary-600 dark:text-primary-300 hover:text-highlight-600 dark:hover:text-highlight-400 hover:bg-primary-50 dark:hover:bg-primary-800 transition-colors font-medium rounded-md"
               target={page.url.startsWith('http') ? '_blank' : undefined}
-              aria-label={`Navigate to ${page.title}`}
+              aria-label={`Přejít na ${page.title}`}
             >
               <span>{page.title}</span>
               {page.url.startsWith('http') && (
