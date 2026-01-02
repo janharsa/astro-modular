@@ -83,7 +83,7 @@
   "commandPalette": {
     "enabled": true,
     "shortcut": "ctrl+K",
-    "placeholder": "Search posts",
+    "placeholder": "Hledat články",
     "search": {
       "posts": true,
       "pages": false,

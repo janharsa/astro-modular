@@ -252,7 +252,7 @@ export const siteConfig: SiteConfig = {
     // [CONFIG:COMMAND_PALETTE_SHORTCUT]
     shortcut: "ctrl+K",
     // [CONFIG:COMMAND_PALETTE_PLACEHOLDER]
-    placeholder: "Search posts",
+    placeholder: "Hledat články",
     search: {
       // [CONFIG:COMMAND_PALETTE_SEARCH_POSTS]
       posts: true,
@@ -290,7 +290,7 @@ export const siteConfig: SiteConfig = {
     // [CONFIG:PROFILE_PICTURE_IMAGE]
     image: "/profile.jpg", // Path to your profile image (place in public/ directory)
     // [CONFIG:PROFILE_PICTURE_ALT]
-    alt: "Profile picture",
+    alt: "Profilový obrázek",
     // [CONFIG:PROFILE_PICTURE_SIZE]
     size: "md", // "sm" (32px), "md" (48px), or "lg" (64px) - only affects footer placement
     // [CONFIG:PROFILE_PICTURE_URL]
@@ -316,7 +316,7 @@ export const siteConfig: SiteConfig = {
       { title: "Docs", url: "/docs/" },
       { title: "About", url: "/about/",
         children: [
-          { title: "Privacy Policy", url: "/privacy-policy/" }
+          { title: "Zásady ochrany osobních údajů", url: "/privacy-policy/" }
         ] },
       { title: "GitHub", url: "https://github.com/davidvkimball/astro-modular" }
     ],

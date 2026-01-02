@@ -211,7 +211,7 @@ var DEFAULT_SETTINGS = {
   commandPalette: {
     enabled: true,
     shortcut: "ctrl+K",
-    placeholder: "Search posts",
+    placeholder: "Hledat články",
     search: {
       posts: true,
       pages: false,
@@ -545,7 +545,7 @@ var TEMPLATE_OPTIONS = [
     id: "minimal",
     name: "Minimal",
     description: "Clean, simple blog with minimal features and content",
-    features: ["Command palette", "Search posts/pages", "Minimal navigation"],
+    features: ["Command palette", "Hledat články/stránky", "Minimal navigation"],
     recommended: false
   }
 ];
@@ -5891,7 +5891,7 @@ var FeaturesTab = class extends TabRenderer {
               settings.commandPalette = {
                 enabled: true,
                 shortcut: "ctrl+K",
-                placeholder: "Search posts",
+                placeholder: "Hledat články",
                 search: { posts: true, pages: false, projects: false, docs: false },
                 sections: { quickActions: true, pages: true, social: true },
                 quickActions: { enabled: true, toggleMode: true, graphView: true, changeTheme: true }
@@ -5925,7 +5925,7 @@ var FeaturesTab = class extends TabRenderer {
               clearTimeout(timeoutId);
             }
             if (!settings.commandPalette) {
-              settings.commandPalette = { enabled: true, shortcut: "ctrl+K", placeholder: "Search posts", search: { posts: true, pages: false, projects: false, docs: false }, sections: { quickActions: true, pages: true, social: true }, quickActions: { enabled: true, toggleMode: true, graphView: true, changeTheme: true } };
+              settings.commandPalette = { enabled: true, shortcut: "ctrl+K", placeholder: "Hledat články", search: { posts: true, pages: false, projects: false, docs: false }, sections: { quickActions: true, pages: true, social: true }, quickActions: { enabled: true, toggleMode: true, graphView: true, changeTheme: true } };
             }
             settings.commandPalette.shortcut = value;
             void this.plugin.saveData(settings);
@@ -5949,14 +5949,14 @@ var FeaturesTab = class extends TabRenderer {
         });
         setting2.setName("Placeholder").setDesc("Placeholder text in command palette search box").addText((text) => {
           var _a2;
-          text.setValue(((_a2 = settings.commandPalette) == null ? void 0 : _a2.placeholder) || "Search posts");
+          text.setValue(((_a2 = settings.commandPalette) == null ? void 0 : _a2.placeholder) || "Hledat články");
           let timeoutId = null;
           text.onChange((value) => {
             if (timeoutId) {
               clearTimeout(timeoutId);
             }
             if (!settings.commandPalette) {
-              settings.commandPalette = { enabled: true, shortcut: "ctrl+K", placeholder: "Search posts", search: { posts: true, pages: false, projects: false, docs: false }, sections: { quickActions: true, pages: true, social: true }, quickActions: { enabled: true, toggleMode: true, graphView: true, changeTheme: true } };
+              settings.commandPalette = { enabled: true, shortcut: "ctrl+K", placeholder: "Hledat články", search: { posts: true, pages: false, projects: false, docs: false }, sections: { quickActions: true, pages: true, social: true }, quickActions: { enabled: true, toggleMode: true, graphView: true, changeTheme: true } };
             }
             settings.commandPalette.placeholder = value;
             void this.plugin.saveData(settings);
@@ -5982,7 +5982,7 @@ var FeaturesTab = class extends TabRenderer {
           var _a2, _b2, _c;
           return toggle.setValue((_c = (_b2 = (_a2 = settings.commandPalette) == null ? void 0 : _a2.search) == null ? void 0 : _b2.posts) != null ? _c : true).onChange(async (value) => {
             if (!settings.commandPalette) {
-              settings.commandPalette = { enabled: true, shortcut: "ctrl+K", placeholder: "Search posts", search: { posts: true, pages: false, projects: false, docs: false }, sections: { quickActions: true, pages: true, social: true }, quickActions: { enabled: true, toggleMode: true, graphView: true, changeTheme: true } };
+              settings.commandPalette = { enabled: true, shortcut: "ctrl+K", placeholder: "Hledat články", search: { posts: true, pages: false, projects: false, docs: false }, sections: { quickActions: true, pages: true, social: true }, quickActions: { enabled: true, toggleMode: true, graphView: true, changeTheme: true } };
             }
             if (!settings.commandPalette.search) {
               settings.commandPalette.search = { posts: true, pages: false, projects: false, docs: false };
@@ -7333,7 +7333,7 @@ var AdvancedTab = class extends TabRenderer {
               settings2.commandPalette = {
                 enabled: true,
                 shortcut: "ctrl+K",
-                placeholder: "Search posts",
+                placeholder: "Hledat články",
                 search: { posts: true, pages: false, projects: false, docs: false },
                 sections: { quickActions: true, pages: true, social: true },
                 quickActions: { enabled: true, toggleMode: true, graphView: true, changeTheme: true }
@@ -8053,7 +8053,7 @@ var ConfigTemplateManager = class {
           commandPalette: {
             enabled: true,
             shortcut: "ctrl+K",
-            placeholder: "Search posts",
+            placeholder: "Hledat články",
             search: {
               posts: true,
               pages: false,
@@ -8133,7 +8133,7 @@ var ConfigTemplateManager = class {
           commandPalette: {
             enabled: true,
             shortcut: "ctrl+K",
-            placeholder: "Search posts",
+            placeholder: "Hledat články",
             search: {
               posts: true,
               pages: false,
